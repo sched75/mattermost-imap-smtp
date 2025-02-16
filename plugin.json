@@ -1,0 +1,32 @@
+{
+  "id": "com.example.mattermost-imap-smtp-plugin",
+  "name": "IMAP/SMTP Plugin",
+  "description": "Sync emails from any IMAP server to Mattermost and send replies via SMTP.",
+  "version": "1.0.0",
+  "server": {
+    "executables": {
+      "linux-amd64": "server/plugin.js"
+    }
+  },
+  "webapp": {
+    "bundle_path": "webapp/dist/main.js"
+  },
+  "settings_schema": {
+    "header": "Configure IMAP/SMTP settings",
+    "footer": "For help, contact the plugin administrator.",
+    "settings": [
+      {
+        "key": "Configurations",
+        "display_name": "Configurations",
+        "type": "text",
+        "help_text": "Add multiple configurations for channel/IMAP/SMTP mappings."
+      },
+      {
+        "key": "RoutingRules",
+        "display_name": "Routing Rules",
+        "type": "text",
+        "help_text": "Define routing rules for emails."
+      }
+    ]
+  }
+}
